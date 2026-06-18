@@ -5,6 +5,7 @@ const txtNombre = document.getElementById("txtNombre");
 const txtNota1 = document.getElementById("txtNota1");
 const txtNota2 = document.getElementById("txtNota2");
 const txtNota3 = document.getElementById("txtNota3");
+const txtNota4 = document.getElementById("txtNota4");
 const btnCalcular = document.getElementById("btnCalcular");
 const resultado = document.getElementById("resultado");
 
@@ -16,8 +17,9 @@ function calcularPromedio(){
     let nota = parseFloat(txtNota1.value);
     let nota2 = parseFloat(txtNota2.value);
     let nota3 = parseFloat(txtNota3.value);
+    let nota4 = parseFloat(txtNota4.value);
 
-    if(nombre == "" || isNaN(nota) || isNaN(nota2) ||  isNaN(nota3)){
+    if(nombre == "" || isNaN(nota) || isNaN(nota2) ||  isNaN(nota3) || isNaN(nota4)){
 
         resultado.innerHTML = `<div class="alert alert-danger">
                             complete todos los campos correctamente
@@ -26,7 +28,7 @@ function calcularPromedio(){
 
     }
 
-    const promedio = (nota + nota2 + nota3)/3;
+    const promedio = (nota + nota2 + nota3 + nota4)/4;
 
     let estado = promedio >= notaMinima ? "Aprobado": "Reprobado";
 
